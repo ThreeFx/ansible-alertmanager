@@ -14,6 +14,8 @@ Role Variables
 
 | Variable Name | Default Value | Description |
 --------------- |---------------|--------------
+`alertmanager_default_receiver` | "changeme" | Default receiver for alertmanager
+`alertmanager_receivers` | [] | Receivers for alertmanager
 
 Dependencies
 ------------
