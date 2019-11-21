@@ -1,2 +1,3 @@
 ---
+alertmanager_default_receiver: "changeme"
 alertmanager_receivers: []
