@@ -38,4 +38,4 @@ route:
 inhibit_rules: []
 
 receivers:
-  {{ alertmanager_receivers | to_nice_yaml | indent(2) }}
+  {{ alertmanager_receivers | to_nice_yaml(indent=2) | indent(2) }}
