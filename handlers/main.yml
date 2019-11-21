@@ -1,0 +1,7 @@
+---
+- name: restart alertmanager
+  become: True
+  systemd:
+    name: prometheus-alertmanager
+    state: restarted
+    enabled: yes

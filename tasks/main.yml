@@ -1,0 +1,20 @@
+---
+- name: Install alertmanager
+  become: True
+  apt:
+    name:
+      - prometheus-alertmanager
+
+- name: Configure defaults for alertmanager
+  become: True
+  template:
+    src: default.j2
+    dest: /etc/default/prometheus-alertmanager
+  notify: restart alertmanager
+
+- name: Configure alertmanger
+  become: True
+  template:
+    src: alertmanager.yml.j2
+    dest: /etc/prometheus/alertmanager.yml
+  notify: restart alertmanager
